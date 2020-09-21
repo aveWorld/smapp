@@ -13,7 +13,7 @@ import RectBotRight from '../../assets/svg/rect_bot-right.svg';
 import VaultTopImg from '../../assets/svg/vault_top-img.svg'
 
 
-  function NewVault() {
+  function MasterAccount() {
     return (
         <VaultItem>
             <ReactSVG src={RectTopLeft} className="rect_top-left"/>
@@ -24,7 +24,7 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
             <VaultWrapper>
                 <VaultHeader>
                     <div className="header__title">
-                        <h3 className="header__title"><span><ReactSVG src={TitleImg} className="header__img"/></span> NEW VAULT</h3> 
+                        <h3 className="header__title"><span><ReactSVG src={TitleImg} className="header__img"/></span> VAULT MASTER ACCOUNT</h3> 
                         <span className="header__question">
                             <QuestionMark>?</QuestionMark>
                             <div className="header__tooltip">
@@ -42,7 +42,7 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
                                 <p className="tooltip__p">Vault will be created in My Wallet. To create a vault which uses a Ledger device for signing transactions, create a vault in a Ledger wallet.</p>
                         </div>
                         </span>  . . . . . . . . . . . . . . . . .</div>
-                    <input type="text" className="vault__input" placeholder="MY VAULT NAME"/>
+                    <input type="text" className="vault__input" placeholder="My Vault NAME"/>
                 </VaultMain>
                 <VaultFooter>
                     <Link to="/" className="footer__link">VAULT SETUP GUIDE</Link>
@@ -219,4 +219,4 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
     z-index: 9;
   `
 
-export default NewVault;
+export default MasterAccount;

@@ -1,15 +1,37 @@
 import React from 'react';
+import {
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
+import styled from 'styled-components';
+
 
 //Components
 import Layout from './components/Layout';
-import Home from './components/Home'
+import Wallet from './components/Wallet';
+import NewVault from './components/NewVault';
+import MasterAccount from './components/MasterAccount'
 
-function App() {
-  return (
-    <Layout>
-      <Home />
-    </Layout>
-  );
-}
+  function App() {
+    return (
+      <Layout>
+        <HomeWrapper>
+          <Wallet />
+            <Switch>
+              <Route exact path="/" component={() => <NewVault />} />
+              <Route exact path="/master_account" component={() => <MasterAccount />} />
+            </Switch>
+        </HomeWrapper>
+      </Layout>
+    );  
+  }
+
+  const HomeWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 52px);
+  `
 
 export default App;
