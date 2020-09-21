@@ -45,10 +45,10 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
 
   const VaultItem = styled.div`
     position: relative;
-    // .vault__text {
-    //     font-size: 12px;
-    //     line-height: 15px;
-    // }
+    .vault__text {
+        font-size: 12px;
+        line-height: 15px;
+    }
     margin-left: 9px;
     background: rgba(0, 0, 0, 0.02);
     .rect_top-left {
@@ -112,6 +112,11 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
     .header__img {
         margin-right: 5px;
     }
+    @media screen and (max-width: 992px) {
+        .header__title {
+            font-size: 28px;
+        }
+    }
   `
 
   const VaultMain = styled.div`
@@ -122,6 +127,17 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
     .vault__input {
         width: 238px;
         height: 28px;
+        margin-left: 30px;
+    }
+    @media screen and (max-width: 992px) {
+        display: block;
+        .vault__input {
+            width: 210px;
+            height: 26px;
+            margin-left: 0px;
+            margin-top: 10px;
+            font-size: 12px;
+        }
     }
   `
 
@@ -133,6 +149,10 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
     .footer__link {
         color: #1776E3;
         padding-left: 26px;
+        font-size: 12px;
+    }
+    @media screen and (max-width: 992px) {
+        padding-top: 85px;
     }
   `
 

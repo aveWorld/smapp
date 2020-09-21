@@ -68,7 +68,7 @@ import BtnImg from '../../assets/svg/home_btn-left.svg'
       line-height: 40px;
       margin: 0;
     }
-    .wallet_text {
+    .wallet__text {
       font-size: 12px;
       line-height: 15px;
     }
@@ -78,6 +78,11 @@ import BtnImg from '../../assets/svg/home_btn-left.svg'
     .wallet__copy-img {
       display: inline-block;
     }
+    @media screen and (max-width: 992px) {
+      .wallet__title {
+          font-size: 28px;
+      }
+  }
   `
 
   const WalletContentFooter = styled.div`

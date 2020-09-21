@@ -74,6 +74,9 @@ import Square4 from '../../../assets/svg/square4.svg';
     .header__logo {
         margin-top: 5px;
     }
+    @media screen and (max-width: 768px) {
+        margin-left: 0px;
+    }
   `
 
   const HeaderUL = styled.ul`
