@@ -25,15 +25,18 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
                 <VaultHeader>
                     <div className="header__title">
                         <h3 className="header__title"><span><ReactSVG src={TitleImg} className="header__img"/></span> VAULT MASTER ACCOUNT</h3> 
-                        <span className="header__question">
-                            <QuestionMark>?</QuestionMark>
-                            <div className="header__tooltip">
-                                <p className="tooltip__p">Vault will be created in My Wallet. To create a vault which uses a Ledger device for signing transactions, create a vault in a Ledger wallet.</p>
-                            </div>
-                        </span>
                     </div>
                     <p className="vault__text">--</p>
-                    <p className="vault__text fixed-width">A vault is an enhanced account with extra security and spending features.</p>
+                    <div className="vault__text fixed-width d-flex">
+                        <p>The master account is the account that will be used to perform vault operations such as withdrawing funds.
+                        <span className="header__question">
+                        <QuestionMark>?</QuestionMark>
+                        <div className="main__tooltip">
+                                <p className="tooltip__p">Vault will be created in My Wallet. To create a vault which uses a Ledger device for signing transactions, create a vault in a Ledger wallet.</p>
+                        </div>
+                        </span>
+                        </p>
+                    </div>
                 </VaultHeader>
                 <VaultMain>
                     <div className="vault__text">Vault name <span className="main__question">
@@ -42,7 +45,11 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
                                 <p className="tooltip__p">Vault will be created in My Wallet. To create a vault which uses a Ledger device for signing transactions, create a vault in a Ledger wallet.</p>
                         </div>
                         </span>  . . . . . . . . . . . . . . . . .</div>
-                    <input type="text" className="vault__input" placeholder="My Vault NAME"/>
+                        <select name="select" className="main__select">
+                            <option value="value1">My Vault name, 35.4 SMH, 0x614...556</option> 
+                            <option value="value2">My Vault name, 35.4 SMH, 0x614...556</option>
+                            <option value="value3">My Vault name, 35.4 SMH, 0x614...556</option>
+                        </select>
                 </VaultMain>
                 <VaultFooter>
                     <Link to="/" className="footer__link">VAULT SETUP GUIDE</Link>
@@ -114,18 +121,17 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
     .header__title {
         display: flex;
     }
-    .header__question {
-        display: flex;
-        margin-top: 12px;
-        margin-left: 5px;
-        &:hover .header__tooltip{
-            display: block;
-        }
-    }
     .header__img {
         margin-right: 5px;
     }
-    .header__tooltip {
+    .header__question {
+        position: relative;
+        margin-left: 5px;
+        &:hover .main__tooltip{
+            display: block;
+        }
+    }
+    .main__tooltip {
         display: none;
         position: absolute;
         width: 250px;
@@ -134,6 +140,9 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
         font-size: 12px;
         border: 1px solid black;
         z-index: 1;
+        left: 0;
+        top: 0;
+        margin-top: 4px;
     }
     .tooltip__p {
         text-align: center;
@@ -147,14 +156,16 @@ import VaultTopImg from '../../assets/svg/vault_top-img.svg'
   `
 
   const VaultMain = styled.div`
-    padding-top: 34px;
+    padding-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .vault__input {
-        width: 238px;
+    .main__select {
+        width: 270px;
         height: 28px;
-        margin-left: 30px;
+        color: rgba(64, 64, 64, 0.5);
+        font-size: 12px;
+        padding-left: 10px;
     }
     .main__question {
         position: relative;
