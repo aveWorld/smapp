@@ -16,28 +16,31 @@ import VaultType from "./components/VaultType";
 import DailySpending from './components/DailySpending';
 import MasterAccounts from './components/MasterAccount/MasterAccounts';
 import CreateVaultTransaction from "./components/VaultTransaction";
+import ReviewNewVault from './components/ReviewNewVault';
 import VaultSubmitted from "./components/VaultSubmitted";
 
-  function App() {
-    return (
-      <Layout>
-        <HomeWrapper>
-          <Wallet />
-            <Switch>
-              <Route exact path="/" component={() => <NewVault />} />
-              <Route exact path="/master_account" component={() => <MasterAccount />} />
-              <Route exact path="/master-accounts" component={() => <MasterAccounts />} />
-              <Route exact path="/vault-type" component={() => <VaultType />} />
-              <Route exact path="/daily-spending" component={() => <DailySpending />} />
-              <Route exact path="/create-vault" component={() => <CreateVaultTransaction />} />
-              <Route exact path="/vault-submitted" component={() => <VaultSubmitted />} />
-            </Switch>
-        </HomeWrapper>
-      </Layout>
-    );  
-  }
 
-  const HomeWrapper = styled.div`
+function App() {
+  return (
+    <Layout>
+      <HomeWrapper>
+        <Wallet />
+        <Switch>
+          <Route exact path="/" component={() => <NewVault />} />
+          <Route exact path="/master_account" component={() => <MasterAccount />} />
+          <Route exact path="/master-accounts" component={() => <MasterAccounts />} />
+          <Route exact path="/vault-type" component={() => <VaultType />} />
+          <Route exact path="/daily-spending" component={() => <DailySpending />} />
+          <Route exact path="/create-vault" component={() => <CreateVaultTransaction />} />
+          <Route exact path="/review-new-vault" component={() => <ReviewNewVault />} />
+          <Route exact path="/vault-submitted" component={() => <VaultSubmitted />} />
+        </Switch>
+      </HomeWrapper>
+    </Layout>
+  );
+}
+
+const HomeWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
