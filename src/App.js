@@ -12,7 +12,8 @@ import Layout from './components/Layout';
 import Wallet from './components/Wallet';
 import NewVault from './components/NewVault';
 import MasterAccount from './components/MasterAccount'
-import VaultType from './components/VaultType';
+import VaultType from "./components/VaultType";
+import DailySpending from './components/DailySpending';
 import MasterAccounts from './components/MasterAccount/MasterAccounts';
 
   function App() {
@@ -25,6 +26,7 @@ import MasterAccounts from './components/MasterAccount/MasterAccounts';
               <Route exact path="/master_account" component={() => <MasterAccount />} />
               <Route exact path="/master-accounts" component={() => <MasterAccounts />} />
               <Route exact path="/vault-type" component={() => <VaultType />} />
+              <Route exact path="/daily-spending" component={() => <DailySpending />} />
             </Switch>
         </HomeWrapper>
       </Layout>
