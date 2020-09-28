@@ -16,6 +16,8 @@ import VaultType from "./components/VaultType";
 import DailySpending from './components/DailySpending';
 import MasterAccounts from './components/MasterAccount/MasterAccounts';
 import CreateVaultTransaction from "./components/VaultTransaction";
+import ReviewNewVault from './components/ReviewNewVault';
+
 
   function App() {
     return (
@@ -29,6 +31,7 @@ import CreateVaultTransaction from "./components/VaultTransaction";
               <Route exact path="/vault-type" component={() => <VaultType />} />
               <Route exact path="/daily-spending" component={() => <DailySpending />} />
               <Route exact path="/create-vault" component={() => <CreateVaultTransaction />} />
+              <Route exact path="/review-new-vault" component={() => <ReviewNewVault />} />
             </Switch>
         </HomeWrapper>
       </Layout>
